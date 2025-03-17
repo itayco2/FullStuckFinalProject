@@ -42,6 +42,11 @@ export class LessonEditComponent implements OnInit {
     this.lessonId = this.route.snapshot.paramMap.get('id') || '';
     this.courseId = this.route.snapshot.paramMap.get('courseid') || '';       
 
+
+    if(this.lessonId)
+        this.loadLesson(this.lessonId)
+    
+
     // Initialize the form group with form controls and validators
     this.lessonFormGroup = this.formBuilder.group({
       titleControl: new FormControl('', [
@@ -55,6 +60,22 @@ export class LessonEditComponent implements OnInit {
         Validators.maxLength(1000),
       ]),
     });
+  }
+
+  private loadLesson(lessonId: string): void {
+    this.lessonService.getOneLesson(lessonId).then(
+      (lesson) => {
+        this.lessonModel = lesson; // Preload lesson data into the model
+        this.lessonFormGroup.patchValue({
+          titleControl: this.lessonModel.title,
+          videoUrlControl: this.lessonModel.videoUrl
+        });
+      }
+    ).catch(
+      (error) => {
+        this.notifyService.error('Failed to load course details.');
+      }
+    );
   }
 
   // Method to handle form submission

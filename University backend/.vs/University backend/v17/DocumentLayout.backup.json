@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\",
+  "WorkspaceRootPath": "C:\\Users\\itay7\\Desktop\\project\\University backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|c:\\users\\itay7\\desktop\\matrix\\university backend\\5-controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|c:\\users\\itay7\\desktop\\project\\university backend\\5-controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|solutionrelative:5-controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|c:\\users\\itay7\\desktop\\matrix\\university backend\\4-services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|c:\\users\\itay7\\desktop\\project\\university backend\\4-services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|solutionrelative:4-services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|c:\\users\\itay7\\desktop\\matrix\\university backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|c:\\users\\itay7\\desktop\\project\\university backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E13DFE20-AEF9-4C77-B157-58AD4CD29FCD}|University backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CoursesController.cs",
-              "DocumentMoniker": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\5-Controllers\\CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\itay7\\Desktop\\project\\University backend\\5-Controllers\\CoursesController.cs",
               "RelativeDocumentMoniker": "5-Controllers\\CoursesController.cs",
-              "ToolTip": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\5-Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\itay7\\Desktop\\project\\University backend\\5-Controllers\\CoursesController.cs",
               "RelativeToolTip": "5-Controllers\\CoursesController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T17:25:40.939Z",
               "EditorCaption": ""
@@ -45,27 +45,25 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CourseService.cs",
-              "DocumentMoniker": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\4-Services\\CourseService.cs",
+              "DocumentMoniker": "C:\\Users\\itay7\\Desktop\\project\\University backend\\4-Services\\CourseService.cs",
               "RelativeDocumentMoniker": "4-Services\\CourseService.cs",
-              "ToolTip": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\4-Services\\CourseService.cs",
+              "ToolTip": "C:\\Users\\itay7\\Desktop\\project\\University backend\\4-Services\\CourseService.cs",
               "RelativeToolTip": "4-Services\\CourseService.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T17:25:17.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T17:25:17.46Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\itay7\\Desktop\\project\\University backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\itay7\\Desktop\\Matrix\\University backend\\Program.cs",
+              "ToolTip": "C:\\Users\\itay7\\Desktop\\project\\University backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T16:12:03.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T16:12:03.952Z"
             }
           ]
         }
