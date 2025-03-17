@@ -77,9 +77,10 @@ public class CourseService : IDisposable
         Course? dbCourse = await _db.Courses.FindAsync(id);
         if (dbCourse == null) return false;
 
-        if (dbCourse.Enrollments != null) throw new ValidationException("This course already has enrollments and cannot be modified.");
-        
-
+        if (_db.Enrollments.AsNoTracking().Any(e => e.CourseId == dbCourse.Id))
+        {
+            throw new ValidationException("This course already has enrollments and cannot be modified.");
+        }
 
         _db.Courses.Remove(dbCourse);
         await _db.SaveChangesAsync();
