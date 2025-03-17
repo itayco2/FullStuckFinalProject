@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { youtubeUrlValidator } from '../../../utils/validators';
 
 @Component({
   selector: 'app-lesson-edit',
@@ -58,6 +59,7 @@ export class LessonEditComponent implements OnInit {
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(1000),
+        youtubeUrlValidator
       ]),
     });
   }

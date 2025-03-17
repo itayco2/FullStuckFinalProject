@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace University_backend;
@@ -57,11 +58,25 @@ public class CoursesController : ControllerBase
     [HttpDelete("api/courses/{id}")]
     public async Task<IActionResult> DeleteCourseAsync([FromRoute] Guid id)
     {
-        if (!ModelState.IsValid) return BadRequest(new ValidationError(ModelState.GetFirstError()));
-        bool success = await _courseService.DeleteCourseAsync(id);
-        if (!success) return NotFound(new ResourceNotFound(id));
-        return NoContent();
+        // Check if the model state is valid
+        if (!ModelState.IsValid)
+            return BadRequest(new ValidationError(ModelState.GetFirstError()));
+
+        try
+        {
+            bool success = await _courseService.DeleteCourseAsync(id);
+
+            if (!success)
+                return NotFound(new ResourceNotFound(id)); // If course not found, return 404
+
+            return NoContent(); 
+        }
+        catch (ValidationException err)
+        {
+            return BadRequest(new ValidationError(err.Message)); // Return 400 with the validation error message
+        }
     }
+
 }
 
 

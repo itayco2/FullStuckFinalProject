@@ -14,3 +14,11 @@ export function extraSpacing(): ValidatorFn {
         return null;
     };
 }
+
+export function youtubeUrlValidator(control: AbstractControl): ValidationErrors | null {
+    const url: string = control.value;
+    if (!url) return null; // Allow empty values (handled by required validator)
+  
+    const regex = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(&.*)?$/;
+    return regex.test(url) ? null : { invalidYouTubeUrl: true };
+  }

@@ -29,6 +29,9 @@
             <mat-error *ngIf="lessonFormGroup.controls['videoUrlControl'].hasError('maxlength') && lessonFormGroup.controls['videoUrlControl'].touched">
                 Video URL can't exceed 1000 characters.
             </mat-error>
+            <mat-error *ngIf="lessonFormGroup.controls['videoUrlControl'].hasError('invalidYouTubeUrl') && lessonFormGroup.controls['videoUrlControl'].touched">
+                Video URL is not valid.
+            </mat-error>            
         </mat-form-field>
 
         <!-- Submit Button -->

@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.ComponentModel.DataAnnotations;
+using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -75,6 +76,10 @@ public class CourseService : IDisposable
     {
         Course? dbCourse = await _db.Courses.FindAsync(id);
         if (dbCourse == null) return false;
+
+        if (dbCourse.Enrollments != null) throw new ValidationException("This course already has enrollments and cannot be modified.");
+        
+
 
         _db.Courses.Remove(dbCourse);
         await _db.SaveChangesAsync();

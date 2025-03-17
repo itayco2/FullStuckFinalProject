@@ -64,7 +64,7 @@ export class CourseDetailsComponent implements OnInit {
 
       this.router.navigateByUrl('/courses');
     } catch (err: any) {
-      this.notifyService.error('Failed to delete Course');
+      this.notifyService.error('Failed to delete Course students already enrolled');
       console.error(err);
     }
   }
