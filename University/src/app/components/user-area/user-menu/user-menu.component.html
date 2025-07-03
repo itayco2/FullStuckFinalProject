@@ -1,28 +1,34 @@
 <div class="user-menu">
     <ng-container *ngIf="userStore.user(); else guestMenu">
         <div class="user-info">
-            <img class="user-avatar" src="assets/images/avatar.png" alt="User Avatar" (click)="toggleMenu()" />
+            <img class="user-avatar" 
+                 src="assets/images/avatar.png" 
+                 alt="User Avatar" 
+                 (click)="toggleMenu()" />
+            <span class="user-greeting" (click)="toggleMenu()">
+                Hello {{ userStore.user().name }}
+            </span>
         </div>
 
-        <div>
-            <span (click)="toggleMenu()" class="clickable-text">Hello {{ userStore.user().name }}</span>
-        </div>
-        <div *ngIf="isMenuOpen" class="dropdown-menu">
-          
+        <div class="dropdown-menu" [class.show]="isMenuOpen">
             <div class="dropdown-option">
                 <a routerLink="/home" (click)="logOut()">Logout</a>
             </div>
-            <div *ngIf="canSeeProgress"
-             class="dropdown-option">
-                <a [routerLink]="['/progress', userStore.user().id]">View My Progress</a>
+            <div *ngIf="canSeeProgress" class="dropdown-option">
+                <a [routerLink]="['/progress', userStore.user().id]" (click)="closeMenu()">
+                    View My Progress
+                </a>
             </div>
         </div>
     </ng-container>
 
     <ng-template #guestMenu>
-        <span>Hello Guest | </span>
-        <a routerLink="/login">Login</a>
-        <span> | </span>
-        <a routerLink="/register">Register</a>
+        <div class="guest-menu">
+            <span class="guest-greeting">Hello Guest</span>
+            <span class="guest-separator">|</span>
+            <a routerLink="/login">Login</a>
+            <span class="guest-separator">|</span>
+            <a routerLink="/register">Register</a>
+        </div>
     </ng-template>
 </div>

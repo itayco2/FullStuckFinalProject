@@ -5,11 +5,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999; /* Reduced from 1000 */
     width: 100%;
-  }
-  
-  .header-container {
+    overflow: visible; /* Added this - CRITICAL FIX */
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,18 +18,20 @@
     max-width: 1400px;
     margin: 0 auto;
     height: 70px;
-  }
-  
-  /* Left Section with Logo and Menu */
-  .left-section {
+    overflow: visible; /* Added this - CRITICAL FIX */
+}
+
+/* Left Section with Logo and Menu */
+.left-section {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex: 1;
-  }
-  
-  /* Center Title */
-  .site-title {
+    overflow: visible; /* Added this - CRITICAL FIX */
+}
+
+/* Center Title */
+.site-title {
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0;
@@ -37,66 +40,114 @@
     text-transform: uppercase;
     flex: 1;
     text-align: center;
-  }
-  
-  /* Right User Menu */
-  .user-menu-container {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Right User Menu */
+.user-menu-container {
     display: flex;
     justify-content: flex-end;
     flex: 1;
-  }
-  
-  /* Target the Angular Components */
-  app-logo {
+}
+
+/* Target the Angular Components */
+app-logo {
     display: block;
-  }
-  
-  app-menu {
+    flex-shrink: 0;
+}
+
+app-menu {
     display: flex;
-  }
-  
-  app-user-menu {
+    flex-shrink: 0;
+    overflow: visible; /* Added this - CRITICAL FIX */
+    position: relative; /* Added this - CRITICAL FIX */
+}
+
+app-user-menu {
     display: block;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .header-container {
-      padding: 0.6rem 1rem;
-      height: 60px;
+        padding: 0.6rem 1rem;
+        height: 60px;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
     }
     
     .site-title {
-      font-size: 1.4rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.3px;
     }
     
     .left-section {
-      gap: 1rem;
+        gap: 1rem;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     .header-container {
-      flex-wrap: wrap;
-      height: auto;
-      padding: 0.5rem;
+        padding: 0.5rem 0.8rem;
+        height: 50px;
+        min-height: 50px;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
     }
     
     .site-title {
-      font-size: 1.2rem;
-      order: 1;
-      width: 100%;
-      text-align: center;
-      margin: 0.5rem 0;
+        font-size: 1.1rem;
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        max-width: 120px;
     }
     
     .left-section {
-      order: 2;
-      flex: 0 0 50%;
+        gap: 0.8rem;
+        flex: 0 0 auto;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
     }
     
     .user-menu-container {
-      order: 3;
-      flex: 0 0 50%;
+        flex: 0 0 auto;
     }
-  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .header-container {
+        padding: 0.4rem 0.6rem;
+        height: 48px;
+        min-height: 48px;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
+    }
+    
+    .site-title {
+        font-size: 1rem;
+        letter-spacing: 0.1px;
+        max-width: 100px;
+    }
+    
+    .left-section {
+        gap: 0.6rem;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
+    }
+}
+
+/* Ensure components scale properly on mobile */
+@media (max-width: 576px) {
+    app-logo {
+        font-size: 0.9rem;
+    }
+    
+    app-menu {
+        font-size: 0.85rem;
+        overflow: visible; /* Ensure mobile menu isn't clipped */
+    }
+    
+    app-user-menu {
+        font-size: 0.85rem;
+    }
+}

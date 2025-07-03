@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy, HostListener, ElementRef } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { UserStore } from '../../../storage/user-store';
 import { UserService } from '../../../services/user.service';
@@ -21,6 +21,7 @@ export class UserMenuComponent implements OnInit, OnDestroy {
     public notifyService = inject(NotifyService);
     public router = inject(Router);
     public authService = inject(AuthService);
+    private elementRef = inject(ElementRef);
     
     // Flag to indicate if the user can see progress
     public canSeeProgress: boolean = false;
@@ -54,8 +55,22 @@ export class UserMenuComponent implements OnInit, OnDestroy {
         this.isMenuOpen = !this.isMenuOpen;
     }
 
+    // Method to close the menu
+    closeMenu(): void {
+        this.isMenuOpen = false;
+    }
+
+    // Click outside handler to close menu
+    @HostListener('document:click', ['$event'])
+    onDocumentClick(event: MouseEvent): void {
+        if (!this.elementRef.nativeElement.contains(event.target as Node)) {
+            this.isMenuOpen = false;
+        }
+    }
+
     // Method to log out the user
     public logOut(): void {
+        this.closeMenu(); // Close menu before logout
         localStorage.clear();
         this.userService.logout();
         this.notifyService.success("Have a nice day!");

@@ -1,71 +1,223 @@
-/* User Menu container */
+/* User Menu Container */
 .user-menu {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 10px;
+    justify-content: flex-end;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    position: relative; /* Make sure the dropdown is positioned correctly */
-  }
-  
-  /* User info (image and greeting) */
-  .user-info {
+    position: relative;
+    color: white;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* User Info Section */
+.user-info {
     display: flex;
     align-items: center;
-    margin-right: 10px;
-  }
-  
-  .user-avatar {
-    width: 40px;
-    height: 40px;
+    gap: 8px;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
-    cursor: pointer; /* Make the avatar clickable */
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    top: 50px; /* Adjust this based on your layout */
-    right: 0;
-    z-index: 10;
-  }
-  
-  /* Each option container */
-  .dropdown-option {
-    margin: 5px 0;
-    padding: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Styling for links in the dropdown */
-  .dropdown-menu a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .dropdown-menu a:hover {
-    text-decoration: underline;
-  }
-  
-  .dropdown-menu span {
-    color: #555;
-  }
-  
-  /* Optional: Close the dropdown if clicked outside */
-  body {
-    overflow: hidden; /* Optional: Prevent body scrolling when dropdown is open */
-  }
-  .clickable-text {
     cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
 }
-a {
-    color: black;
+
+.user-avatar:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.user-greeting {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.user-greeting:hover {
+    color: #ffeaa7;
+}
+
+/* Guest Menu */
+.guest-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.guest-menu a {
+    color: white;
     text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.guest-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffeaa7;
+}
+
+.guest-separator {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.dropdown-option {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.dropdown-option a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.dropdown-option a:hover {
+    background-color: #f8f9fa;
+    color: #51869c;
+    padding-left: 20px;
+}
+
+/* Dropdown Arrow */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .user-menu {
+        font-size: 13px;
+        gap: 6px;
+    }
+    
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .user-greeting {
+        max-width: 100px;
+        font-size: 13px;
+    }
+    
+    .guest-menu {
+        font-size: 13px;
+        gap: 6px;
+    }
+    
+    .guest-menu a {
+        padding: 5px 10px;
+    }
+    
+    .dropdown-menu {
+        min-width: 160px;
+        right: -10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-menu {
+        font-size: 12px;
+        gap: 4px;
+    }
+    
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .user-greeting {
+        max-width: 80px;
+        font-size: 12px;
+    }
+    
+    .guest-menu {
+        font-size: 12px;
+        gap: 4px;
+    }
+    
+    .guest-menu a {
+        padding: 4px 8px;
+    }
+    
+    .dropdown-menu {
+        min-width: 140px;
+        right: -15px;
+    }
+    
+    .dropdown-option a {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .user-greeting {
+        display: none;
+    }
+    
+    .guest-menu {
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .guest-separator {
+        display: none;
+    }
+    
+    .guest-menu a {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
 }

@@ -1,14 +1,46 @@
-div {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 12vh;
-    width: auto; 
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 100%;
 }
 
-img {
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     height: 100%;
-    width: auto; 
-    max-height: 80px;
-    object-fit: contain; 
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    transition: height 0.3s ease;
+}
+
+/* Responsive Logo Sizes */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo-img {
+        height: 30px;
+    }
 }
