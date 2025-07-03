@@ -3,7 +3,7 @@ using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace University_backend;
+namespace Universitybackend;
 
 // Service class for managing users
 public class UserService : IDisposable

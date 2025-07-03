@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace University_backend;
+namespace Universitybackend;
 
 // Class representing user credentials for login
 public class Credentials

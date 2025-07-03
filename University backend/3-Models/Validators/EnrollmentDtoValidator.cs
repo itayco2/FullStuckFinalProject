@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace University_backend
+namespace Universitybackend
 {
     public class EnrollmentDtoValidator : AbstractValidator<EnrollmentDto>
     {

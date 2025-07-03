@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public class Lesson
 {

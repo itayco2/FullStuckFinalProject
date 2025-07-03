@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 
-namespace University_backend;
+namespace Universitybackend;
 
 // Exception filter to catch all unhandled exceptions
 public class CatchAllFilter : IExceptionFilter

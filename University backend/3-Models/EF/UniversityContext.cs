@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public class UniversityContext : DbContext
 {

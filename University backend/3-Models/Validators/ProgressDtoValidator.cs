@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using System;
 
-namespace University_backend
+namespace Universitybackend
 {
     public class ProgressDtoValidator : AbstractValidator<ProgressDto>
     {

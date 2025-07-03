@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public class ProgressDto
 {

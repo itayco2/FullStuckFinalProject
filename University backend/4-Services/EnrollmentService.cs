@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace University_backend;
+namespace Universitybackend;
 
 // Service class for managing enrollments
 public class EnrollmentService : IDisposable

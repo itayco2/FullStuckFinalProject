@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public static class Extensions
 {

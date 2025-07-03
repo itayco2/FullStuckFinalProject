@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace University_backend;
+namespace Universitybackend;
 
 [ApiController]
 public class EnrollmentController : ControllerBase

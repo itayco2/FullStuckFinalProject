@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using University_backend;
+using Universitybackend;
 using System.Text.Json.Serialization;
 
 public class User

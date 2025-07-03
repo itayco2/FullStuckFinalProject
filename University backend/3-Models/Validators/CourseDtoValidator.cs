@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public class CourseDtoValidator : AbstractValidator<CourseDto>
 {

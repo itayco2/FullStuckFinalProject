@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
-namespace University_backend;
+namespace Universitybackend;
 
 // Service class for managing progress records
 public class ProgressService : IDisposable

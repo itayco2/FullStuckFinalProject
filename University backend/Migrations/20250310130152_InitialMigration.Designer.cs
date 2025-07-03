@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using University_backend;
+using Universitybackend;
 
 #nullable disable
 
-namespace University_backend.Migrations
+namespace Universitybackend.Migrations
 {
     [DbContext(typeof(UniversityContext))]
     [Migration("20250310130152_InitialMigration")]

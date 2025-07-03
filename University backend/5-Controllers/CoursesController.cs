@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace University_backend;
+namespace Universitybackend;
 
 [ApiController]
 public class CoursesController : ControllerBase

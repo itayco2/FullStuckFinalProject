@@ -1,4 +1,4 @@
-﻿namespace University_backend;
+﻿namespace Universitybackend;
 
 public abstract class BaseError
 {

@@ -1,4 +1,4 @@
-﻿namespace University_backend;
+﻿namespace Universitybackend;
 
 static class AppConfig
 {

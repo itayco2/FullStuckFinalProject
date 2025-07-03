@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models; // For Swagger
 using System.Text.Json.Serialization;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public class Program
 {

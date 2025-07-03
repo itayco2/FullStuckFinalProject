@@ -2,7 +2,7 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
-namespace University_backend;
+namespace Universitybackend;
 
 // Service class for managing lessons
 public class LessonService : IDisposable

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
-namespace University_backend;
+namespace Universitybackend;
 
 [ApiController]
 public class ProgressController : ControllerBase

@@ -4,9 +4,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-using University_backend;
+using Universitybackend;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public static class JwtHelper
 {

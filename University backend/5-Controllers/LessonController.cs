@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
-namespace University_backend;
+namespace Universitybackend;
 
 [ApiController]
 public class LessonController : ControllerBase

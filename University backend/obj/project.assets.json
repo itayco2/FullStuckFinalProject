@@ -5322,11 +5322,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\itay7\\Desktop\\Itay Cohen\\University backend\\University backend.csproj",
-      "projectName": "University backend",
-      "projectPath": "C:\\Users\\itay7\\Desktop\\Itay Cohen\\University backend\\University backend.csproj",
+      "projectUniqueName": "C:\\Users\\itay7\\Desktop\\fullstackfinalproject\\University backend\\Universitybackend.csproj",
+      "projectName": "Universitybackend",
+      "projectPath": "C:\\Users\\itay7\\Desktop\\fullstackfinalproject\\University backend\\Universitybackend.csproj",
       "packagesPath": "C:\\Users\\itay7\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\itay7\\Desktop\\Itay Cohen\\University backend\\obj\\",
+      "outputPath": "C:\\Users\\itay7\\Desktop\\fullstackfinalproject\\University backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

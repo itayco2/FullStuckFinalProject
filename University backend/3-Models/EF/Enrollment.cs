@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace University_backend;
+namespace Universitybackend;
 
 public class Enrollment
 {
