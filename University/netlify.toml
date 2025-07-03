@@ -1,0 +1,9 @@
+[build]
+  base = "AdiCohenFitFrontend"
+  command = "npx ng build --configuration production"
+  publish = "dist/adi-cohen-fit-frontend/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
